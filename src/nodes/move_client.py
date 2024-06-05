@@ -18,18 +18,8 @@ def main():
 
     # Example pose
     example_pose = Pose()
-    example_pose.position = Point(0.2, 0.3, 0.1)  # Example position in meters
-    example_pose.orientation = Quaternion(0, 0, 0, 1)  # Example orientation as a quaternion
-
-    result = move_robot_to_pose(example_pose)
-    if result:
-        print("Robot moved successfully!")
-    else:
-        print("Failed to move robot.")
-    rospy.sleep(5)
-    example_pose = Pose()
-    example_pose.position = Point(0.2, 0.3, 0.4)  # Example position in meters
-    example_pose.orientation = Quaternion(0, 0, 0, 1)  # Example orientation as a quaternion
+    example_pose.position = Point(0.34, 0.20, 0.4)  # Example position in meters
+    example_pose.orientation = Quaternion(-0.7070314623250534, 0.00260322079659095,  0.002419391444105879,  0.707173162011272) # x, y, z, w
     result = move_robot_to_pose(example_pose)
     if result:
         print("Robot moved successfully!")
