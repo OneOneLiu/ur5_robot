@@ -97,6 +97,23 @@ class UR_robot(object):
 
         move_group.execute(plan, wait=True)
         
+        return fraction
+
+    def get_current_pose(self):
+        # 获取并打印当前的末端执行器位置和姿态
+        current_pose = self.move_group.get_current_pose().pose
+        rospy.loginfo("Current Pose of the End-Effector: Position - x: {0}, y: {1}, z: {2}; Orientation - x: {3}, y: {4}, z: {5}, w: {6}".format(
+            current_pose.position.x,
+            current_pose.position.y,
+            current_pose.position.z,
+            current_pose.orientation.x,
+            current_pose.orientation.y,
+            current_pose.orientation.z,
+            current_pose.orientation.w
+        ))
+        
+        return current_pose
+
     def run(self):
         rospy.spin()
 
