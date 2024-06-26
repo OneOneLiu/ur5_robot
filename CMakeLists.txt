@@ -162,6 +162,7 @@ include_directories(
 catkin_install_python(PROGRAMS
   src/nodes/move_service.py
   src/nodes/move_client.py
+  src/nodes/move_client_inter.py
   DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
 )
 
