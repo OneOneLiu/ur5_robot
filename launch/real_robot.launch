@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <launch>
 <!-- Set the robot IP address and calibration file-->
-<arg name="robot_ip" default="169.254.120.2" doc="IP address by which the robot can be reached."/>
+<arg name="robot_ip" default="169.254.100.182" doc="IP address by which the robot can be reached."/>
 <arg name="kinematics_config" default="$(find ur5_robot)/config/my_robot_calibration.yaml" doc="Kinematics config file used for calibration correction. This will be used to verify the robot's calibration is matching the robot_description."/>
 
 <!-- Launch robot and moveit nodes -->
